@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI发展简史 | 智能演进历程</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f9f5f0; /* 米白色背景 */
+            --text-color: #3a3226; /* 深棕色文字 */
+            --accent-color: #8b7d6b; /* 棕色调点缀 */
+            --line-color: #e0d8cc; /* 极细分隔线 */
+            --quote-color: #8b7d6b; /* 引用文字颜色 */
+            --card-bg: #fffdfa; /* 卡片背景 */
+            --space-unit: 8px;
+            --card-width: 400px;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: var(--card-width);
+            margin: 0 auto;
+            padding: calc(var(--space-unit) * 3);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        
+        .era-card {
+            background-color: var(--card-bg);
+            width: 100%;
+            padding: calc(var(--space-unit) * 3);
+            margin-bottom: calc(var(--space-unit) * 5);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: relative;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+        
+        .era-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .era-date {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--accent-color);
+            margin-bottom: calc(var(--space-unit) * 0.5);
+            letter-spacing: 0.5px;
+        }
+        
+        .era-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: calc(var(--space-unit) * 0.5);
+            color: var(--text-color);
+            letter-spacing: 0.3px;
+        }
+        
+        .era-subtitle {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--accent-color);
+            margin-bottom: calc(var(--space-unit) * 2);
+        }
+        
+        .era-content {
+            font-size: 0.95rem;
+            margin-bottom: calc(var(--space-unit) * 2);
+        }
+        
+        .quote {
+            font-style: italic;
+            padding: calc(var(--space-unit) * 3);
+            margin: calc(var(--space-unit) * 3) 0;
+            border-left: 2px solid var(--line-color);
+            color: var(--quote-color);
+            position: relative;
+        }
+        
+        .quote::before {
+            content: '"';
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            font-size: 2rem;
+            color: var(--line-color);
+            font-family: 'Noto Serif SC', serif;
+        }
+        
+        .quote-source {
+            font-size: 0.75rem;
+            text-align: right;
+            margin-top: var(--space-unit);
+            color: var(--accent-color);
+        }
+        
+        .key-points {
+            list-style-type: none;
+            padding-left: 0;
+            margin: calc(var(--space-unit) * 3) 0;
+        }
+        
+        .key-points li {
+            position: relative;
+            padding-left: calc(var(--space-unit) * 3);
+            margin-bottom: calc(var(--space-unit) * 1.5);
+            font-size: 0.9rem;
+        }
+        
+        .key-points li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        
+        .tip {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            padding: calc(var(--space-unit) * 2);
+            margin: calc(var(--space-unit) * 3) 0;
+            line-height: 1.6; /* 恢复默认行高 */
+            border-radius: 4px;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--accent-color);
+            margin-top: calc(var(--space-unit) * 5);
+            padding-top: calc(var(--space-unit) * 2);
+            border-top: 1px solid var(--line-color);
+            width: var(--card-width); /* 固定宽度400px */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .footer-line {
+            display: block;
+            margin-bottom: calc(var(--space-unit) * 0.5);
+        }
+        
+        .author {
+            font-style: italic;
+            margin-top: calc(var(--space-unit) * 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- 1950-1960 -->
+    <div class="era-card">
+        <div class="era-date">1950-1960</div>
+        <h2 class="era-title">AI的诞生</h2>
+        <div class="era-subtitle">达特茅斯之夏：一场改变世界的会议</div>
+        <div class="era-content">
+            在计算机还是庞然大物的年代，科学家们首次提出了"人工智能"的概念。图灵测试成为衡量机器智能的标准，达特茅斯会议标志着AI研究的正式开始。
+        </div>
+        
+        <div class="quote">
+            我们相信，如果精心挑选一组科学家共同研究一个夏天，就能在机器模拟人类智能方面取得重大突破。
+            <div class="quote-source">—— 1956年达特茅斯会议提案 (后来证明他们有点太乐观了)</div>
+        </div>
+        
+        <ul class="key-points">
+            <li>1950年：图灵提出著名的"图灵测试"</li>
+            <li>1956年：达特茅斯会议正式命名AI研究领域</li>
+            <li>1966年：第一个聊天机器人ELIZA诞生</li>
+        </ul>
+        
+        <div class="tip">
+            有趣的是，ELIZA模拟的是心理治疗师，很多用户竟然向它倾诉私人问题，尽管他们知道这只是一个程序。
+        </div>
+    </div>
+    
+    <!-- 1970s -->
+    <div class="era-card">
+        <div class="era-date">1970s</div>
+        <h2 class="era-title">AI的第一个寒冬</h2>
+        <div class="era-subtitle">"生锈的自行车"时代</div>
+        <div class="era-content">
+            早期的乐观预期遭遇技术瓶颈，AI研究陷入第一个低谷。资金缩减，批评声四起，但这段沉寂也孕育了未来的突破。
+        </div>
+        
+        <div class="quote">
+            在大多数情况下，AI就像是在珠穆朗玛峰上发现了一台生锈的自行车——理论上可能很有趣，但实际上毫无用处。
+            <div class="quote-source">—— 1973年Lighthill报告 (AI界的差评鼻祖)</div>
+        </div>
+        
+        <ul class="key-points">
+            <li>1973年：Lighthill报告严厉批评AI研究进展</li>
+            <li>美国政府大幅削减AI研究资金</li>
+            <li>研究转向更务实的方向</li>
+        </ul>
+        
+        <div class="tip">
+            讽刺的是，这个低谷期反而催生了后来证明非常有用的专家系统技术。
+        </div>
+    </div>
+    
+    <!-- 1980s -->
+    <div class="era-card">
+        <div class="era-date">1980s</div>
+        <h2 class="era-title">专家系统的时代</h2>
+        <div class="era-subtitle">"比医生更聪明"的机器</div>
+        <div class="era-content">
+            计算机开始在特定领域表现出专家级能力。日本第五代计算机计划引发全球热潮，反向传播算法为神经网络复兴埋下伏笔。
+        </div>
+        
+        <div class="quote">
+            我们的系统能诊断血液感染，准确率比住院医生还高——虽然它分不清咖啡和茶的区别。
+            <div class="quote-source">—— MYCIN专家系统开发者, 1982 (早期AI的专才与通才之争)</div>
+        </div>
+        
+        <ul class="key-points">
+            <li>1980年：首个商用专家系统XCON投入使用</li>
+            <li>1981年：日本启动第五代计算机计划</li>
+            <li>1986年：反向传播算法被重新发现</li>
+        </ul>
+        
+        <div class="tip">
+            专家系统在信用卡欺诈检测领域取得巨大成功，这一应用至今仍是金融科技的重要组成部分。
+        </div>
+    </div>
+    
+    <!-- 1990s -->
+    <div class="era-card">
+        <div class="era-date">1990s</div>
+        <h2 class="era-title">机器学习的崛起</h2>
+        <div class="era-subtitle">"电冰箱"打败世界冠军</div>
+        <div class="era-content">
+            互联网兴起带来数据爆炸，计算机开始从数据中学习规律。IBM深蓝击败国际象棋冠军，展示了计算机的强大计算能力。
+        </div>
+        
+        <div class="quote">
+            我输给了一台价值1000万美元的电冰箱...至少它能下棋时保持冷静。
+            <div class="quote-source">—— 卡斯帕罗夫输给深蓝后 (1997年人类尊严受创日)</div>
+        </div>
+        
+        <ul class="key-points">
+            <li>1997年：IBM深蓝击败国际象棋世界冠军</li>
+            <li>支持向量机等统计学习方法兴起</li>
+            <li>互联网提供了前所未有的训练数据量</li>
+        </ul>
+        
+        <div class="tip">
+            深蓝本质上还是基于暴力计算，真正的智能革命还要等待深度学习的到来。
+        </div>
+    </div>
+    
+    <!-- 2000s -->
+    <div class="era-card">
+        <div class="era-date">2000s</div>
+        <h2 class="era-title">深度学习的复兴</h2>
+        <div class="era-subtitle">"熊猫还是长臂猿？"的困惑</div>
+        <div class="era-content">
+            GPU的强大计算能力让深度学习成为可能。计算机开始能"看懂"图片内容，AI技术开始进入日常生活。
+        </div>
+        
+        <div class="quote">
+            我们不再告诉计算机如何看世界，而是让它们自己学习——虽然有时候它们会把熊猫认成长臂猿，把校车认成鸵鸟。
+            <div class="quote-source">—— 匿名AI研究员 (关于早期图像识别的尴尬时刻)</div>
+        </div>
+        
+        <ul class="key-points">
+            <li>2006年：深度学习"复兴"</li>
+            <li>2012年：AlexNet以巨大优势赢得ImageNet竞赛</li>
+            <li>推荐系统开始改变互联网生态</li>
+        </ul>
+        
+        <div class="tip">
+            早期的深度学习模型需要几周训练才能达到现在几分钟就能达到的准确率，硬件进步功不可没。
+        </div>
+    </div>
+    
+    <!-- 2010-Present -->
+    <div class="era-card">
+        <div class="era-date">2010-现在</div>
+        <h2 class="era-title">AI的爆发时代</h2>
+        <div class="era-subtitle">"会写诗的机器"来了</div>
+        <div class="era-content">
+            Transformer架构带来革命性突破，AI开始能理解和生成自然语言。从专业工具变成日常应用，正在深刻改变我们的生活。
+        </div>
+        
+        <div class="quote">
+            AI不会取代你，但会用AI的人会...除非AI学会了用AI，那我们就都失业了。
+            <div class="quote-source">—— 某科技CEO的AI生成名言 (真实性存疑)</div>
+        </div>
+        
+        <ul class="key-points">
+            <li>2017年：Transformer架构论文发表</li>
+            <li>2020年：GPT-3展示惊人的语言能力</li>
+            <li>生成式AI开始影响创意产业</li>
+        </ul>
+        
+        <div class="tip">
+            当前最先进的AI模型训练一次的电量足够一个普通家庭使用几十年，引发了关于AI可持续性的讨论。
+        </div>
+    </div>
+    
+    <div class="footer">
+        <span class="footer-line">THE EVOLUTION OF ARTIFICIAL INTELLIGENCE</span>
+        <span class="footer-line">04-2025</span>
+        <span class="author">省略号</span>
+    </div>
+
+    <script>
+        // 自动更新年份和月份
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const year = now.getFullYear();
+            const dateElement = document.querySelector('.footer-line:last-child');
+            dateElement.textContent = `${month}-${year}`;
+        });
+    </script>
+</body>
+</html>
